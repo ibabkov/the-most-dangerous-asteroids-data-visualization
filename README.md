@@ -1,6 +1,6 @@
 # the-most-dangerous-asteroids-data-visualization
 
-Some asteroids are very dangerous to the Earth. This is scatter plot data visualization of the first thousand of the most dangerous of them.
+Some asteroids are very dangerous to the Earth. This is a scatter plot data visualization of the first thousand of the most dangerous of planetoids.
 
 ## Main features
 - Visualization of 1000 asteroids
