@@ -20,7 +20,7 @@ export const PointsContainer: React.FC<IPointsContainerProps> = props => {
 	const position = usePointsPosition(scale);
 
 	const handlePointerOver = React.useCallback((e: ThreeEvent<PointerEvent>) => e.stopPropagation(), []);
-
+	console.log(222);
 	return (
 		<points renderOrder={3} position={position} args={[geometry]} scale={scale} onPointerOver={handlePointerOver}>
 			<shaderMaterial

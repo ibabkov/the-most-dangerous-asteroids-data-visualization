@@ -1,31 +1,32 @@
 import React, { useEffect } from 'react';
 
 import classNames from 'classnames';
-import type { XRStore } from '@react-three/xr';
+// import type { XRStore } from '@react-three/xr';
 
 import styles from './XRButton.module.css';
 
 export interface IXRButtonProps {
-	store: XRStore;
+	onClick?: () => void;
 }
 
 export const XRButton: React.FC<IXRButtonProps> = props => {
-	const { store } = props;
 	const [error, setError] = React.useState<boolean>(false);
 
 	const handleClick = React.useCallback(async () => {
 		try {
+			if (props.onClick) props.onClick();
+
 			// await store.enterAR();
 			setError(true);
 		} catch {
 			setError(true);
 		}
-	}, [store, setError]);
+	}, [setError, props, props]);
 
 	useEffect(() => {}, []);
 
 	return (
-		<button disabled={error} onClick={handleClick} className={classNames(styles['container'], error && styles['container-error'])}>
+		<button onClick={handleClick} className={classNames(styles['container'], error && styles['container-error'])}>
 			{error ? 'AR NOT SUPPORTED' : 'ENTER AR'}
 		</button>
 	);

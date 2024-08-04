@@ -11,10 +11,17 @@ const nextConfig = {
 		IS_DEV_MODE: IS_DEV_MODE,
 	},
 	webpack: config => {
-		config.module.rules.push({
-			test: /\.glsl$/,
-			loader: 'webpack-glsl-loader',
-		});
+		config.module.rules.push(
+			{
+				test: /\.glsl$/,
+				loader: 'webpack-glsl-loader',
+			},
+			{
+				test: /zcv\.wasm$/,
+				type: 'javascript/auto',
+				loader: 'file-loader',
+			},
+		);
 
 		return config;
 	},
@@ -26,5 +33,8 @@ module.exports = (phase, { defaultConfig }) => {
 	return plugins.reduce((acc, plugin) => plugin(acc), {
 		...defaultConfig,
 		...nextConfig,
+		...{
+			transpilePackages: ['@zappar/zappar-threejs'],
+		},
 	});
 };

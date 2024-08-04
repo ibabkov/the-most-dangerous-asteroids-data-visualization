@@ -4,7 +4,7 @@ import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 import { OrbitControls } from '@react-three/drei';
 
 import { TCameraSector } from '../../types/internal';
-import { usePrepareXRPlayer, useSwitchRotate } from './hooks';
+import { useSwitchRotate } from './hooks';
 import { MAX_CAMERA_DISTANCE, MAX_CAMERA_POLAR_ANGLE, MIN_CAMERA_DISTANCE, MIN_CAMERA_POLAR_ANGLE } from '../../constants/camera';
 import { getCameraSector } from './helpers';
 
@@ -24,7 +24,7 @@ export const Controls: React.FC<IControlsProps> = props => {
 
 	React.useLayoutEffect(handleEnd, []);
 
-	usePrepareXRPlayer();
+	// usePrepareXRPlayer();
 
 	return (
 		<OrbitControls
