@@ -5,7 +5,6 @@ Some asteroids are very dangerous to the Earth. This is a scatter plot data visu
 ## Main features
 
 - Visualization of 1000 asteroids
-- Augmented reality(AR)/extended Reality(XR) mode
 - Custom shader textures for each asteroid
 - Size of the asteroid varies depending on the distance from the camera
 - Custom 3D Scatter Plot with shader axes
