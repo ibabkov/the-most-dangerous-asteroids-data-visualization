@@ -16,7 +16,6 @@
 	"dependencies": {
 		"@react-three/drei": "^9.109.2",
 		"@react-three/fiber": "^8.16.8",
-		"@react-three/xr": "^6.1.0",
 		"classnames": "^2.5.1",
 		"lodash": "^4.17.21",
 		"next": "^14.2.5",

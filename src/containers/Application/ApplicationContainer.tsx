@@ -14,7 +14,7 @@ export const ApplicationContainer: React.FC = () => {
 
 	return (
 		<>
-			<Canvas dpr={[1, 3]} gl={{ antialias: true }} camera={CAMERA_INITIAL_OPTIONS}>
+			<Canvas dpr={[1, 2]} gl={{ antialias: true }} camera={CAMERA_INITIAL_OPTIONS}>
 				<ThreeScatterPlot marks={marks} scale={scale} />
 				<PointsContainer geometry={geometry} scale={scale} />
 			</Canvas>
