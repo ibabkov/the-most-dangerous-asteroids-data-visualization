@@ -1,19 +1,19 @@
 import React from 'react';
 
-import { TAxis, TCameraSector } from '../../types/internal';
-import { TThreeScatterPlotMarks, TThreeScatterPlotSet } from '../../types/external';
+import { Axis, CameraSector } from '../../types/internal';
+import { ThreeScatterPlotMarks, ThreeScatterPlotSet } from '../../types/external';
 import { getEm } from '../../helpers';
 import { useMark } from './hooks';
 import { Mark } from '../Mark';
 
-export interface IAxisProps {
-	cameraSector: TCameraSector;
-	size: TThreeScatterPlotSet;
-	marks: TThreeScatterPlotMarks;
-	axis: TAxis;
-}
+export type AxisProps = {
+	cameraSector: CameraSector;
+	size: ThreeScatterPlotSet;
+	marks: ThreeScatterPlotMarks;
+	axis: Axis;
+};
 
-export const Axis = (props: IAxisProps) => {
+export const AxisComponent = (props: AxisProps) => {
 	const { size, marks, axis, cameraSector } = props;
 	const em = getEm(size);
 	const mark = useMark(axis, cameraSector, size, marks);

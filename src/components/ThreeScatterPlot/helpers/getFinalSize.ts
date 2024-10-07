@@ -1,6 +1,6 @@
-import { TThreeScatterPlotSet } from '../types/external';
+import { ThreeScatterPlotSet } from '../types/external';
 
-export function getFinalSize(size: TThreeScatterPlotSet, scale: TThreeScatterPlotSet): TThreeScatterPlotSet {
+export function getFinalSize(size: ThreeScatterPlotSet, scale: ThreeScatterPlotSet): ThreeScatterPlotSet {
 	const [x, y, z] = size;
 	const [scaleX, scaleY, scaleZ] = scale;
 

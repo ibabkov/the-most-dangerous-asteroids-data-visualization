@@ -1,7 +1,7 @@
-import { TThreeScatterPlotMarks } from '../../components/ThreeScatterPlot';
+import { ThreeScatterPlotMarks } from '../../components/ThreeScatterPlot';
 import { MAX_DISTANCE_FROM_SUN_KM } from '../../constants/distance';
 
-export function useScatterPlotMarks(): TThreeScatterPlotMarks {
+export function useScatterPlotMarks(): ThreeScatterPlotMarks {
 	return {
 		x: {
 			label: 'Asteroid diameter (km)',

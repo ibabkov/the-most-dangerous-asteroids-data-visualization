@@ -1,11 +1,11 @@
 import memoize from 'lodash/memoize';
 
 import { getBaseAxis, isNeedReverse, getAxisPositions, getAxisRotation, getAxisPosition, getMarkItem } from '../helpers';
-import { TThreeScatterPlotMarks, TThreeScatterPlotSet } from '../../../types/external';
-import { IMark, TAxis, TCameraSector, TMarksList } from '../../../types/internal';
+import { ThreeScatterPlotMarks, ThreeScatterPlotSet } from '../../../types/external';
+import { Mark, Axis, CameraSector, MarksList } from '../../../types/internal';
 
 export const useMark = memoize(
-	(axis: TAxis, cameraSector: TCameraSector, size: TThreeScatterPlotSet, marks: TThreeScatterPlotMarks): IMark => {
+	(axis: Axis, cameraSector: CameraSector, size: ThreeScatterPlotSet, marks: ThreeScatterPlotMarks): Mark => {
 		const baseAxis = getBaseAxis(axis, cameraSector);
 		const reverse = isNeedReverse(axis, cameraSector);
 		const positions = getAxisPositions(size, reverse);
@@ -15,7 +15,7 @@ export const useMark = memoize(
 		return {
 			rotation: rotation,
 			position: position,
-			marks: positions.map(getMarkItem(marks[axis])) as TMarksList,
+			marks: positions.map(getMarkItem(marks[axis])) as MarksList,
 		};
 	},
 	(axis, cameraSector) => `${axis}/${cameraSector}`,

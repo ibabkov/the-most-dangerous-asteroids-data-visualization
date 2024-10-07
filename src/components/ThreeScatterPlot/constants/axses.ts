@@ -1,10 +1,10 @@
 import { Euler } from 'three';
 
-import { TAxis, TCameraSector } from '../types/internal';
-import { IThreeScatterPlotVector } from '../types/external';
+import { Axis, CameraSector } from '../types/internal';
+import { ThreeScatterPlotVector } from '../types/external';
 
-export const AXES: Array<TAxis> = ['x', 'y', 'z'];
-export const POSITION_ANGLE_MAP: { [i: string]: TCameraSector } = {
+export const AXES: Array<Axis> = ['x', 'y', 'z'];
+export const POSITION_ANGLE_MAP: { [i: string]: CameraSector } = {
 	'-1': 0,
 	'-0': 0,
 	'0': 1,
@@ -14,7 +14,7 @@ export const POSITION_ANGLE_MAP: { [i: string]: TCameraSector } = {
 	'-3': 3,
 	'-2': 3,
 };
-export const OPPOSITE_AXIS: IThreeScatterPlotVector<TAxis> = {
+export const OPPOSITE_AXIS: ThreeScatterPlotVector<Axis> = {
 	x: 'z',
 	z: 'x',
 	y: 'y',

@@ -4,10 +4,10 @@ import { Box as ThreeBox } from '@react-three/drei';
 import { BackSide } from 'three';
 
 import { fragmentShader, vertexShader } from './shaders/gridMaterial';
-import { IThreeScatterPlotProps } from '../../types/external';
+import { ThreeScatterPlotProps } from '../../types/external';
 
 const DEFAULT_UNIFORMS = { uColor: { value: [0.6, 0.6, 0.6] } };
-export const Box: React.FC<Omit<IThreeScatterPlotProps, 'marks'>> = props => {
+export const Box: React.FC<Omit<ThreeScatterPlotProps, 'marks'>> = props => {
 	const { size, position, scale } = props;
 
 	return (

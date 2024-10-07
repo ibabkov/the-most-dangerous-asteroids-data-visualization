@@ -8,12 +8,12 @@ import { fragmentShader, vertexShader } from './shaders/pointsMaterial';
 import { usePointsUniforms, usePointsPosition } from './hooks';
 import { POINT_TEXTURE_UTL } from '../../constants/scene';
 
-export interface IPointsContainerProps {
+export type PointsContainerProps = {
 	geometry: BufferGeometry;
 	scale: Parameters<ThreeVector3['set']>;
-}
+};
 
-export const PointsContainer: React.FC<IPointsContainerProps> = props => {
+export const PointsContainer: React.FC<PointsContainerProps> = props => {
 	const { geometry, scale } = props;
 	const texture = useTexture(POINT_TEXTURE_UTL);
 	const uniforms = usePointsUniforms(scale, texture);

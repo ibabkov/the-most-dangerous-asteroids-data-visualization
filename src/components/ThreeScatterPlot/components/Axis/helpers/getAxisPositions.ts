@@ -1,12 +1,12 @@
-import { TThreeScatterPlotSet } from '../../../types/external';
-import { TAxisPositions } from '../../../types/internal';
+import { ThreeScatterPlotSet } from '../../../types/external';
+import { AxisPositions } from '../../../types/internal';
 import { getEm } from '../../../helpers';
 
-export function getAxisPositions(size: TThreeScatterPlotSet, reverse: boolean): TAxisPositions {
+export function getAxisPositions(size: ThreeScatterPlotSet, reverse: boolean): AxisPositions {
 	const em = getEm(size);
 	const [x] = size;
-	const label: [TThreeScatterPlotSet] = [[0, -em * 2, 0]];
-	const marks: [TThreeScatterPlotSet, TThreeScatterPlotSet, TThreeScatterPlotSet] = [
+	const label: [ThreeScatterPlotSet] = [[0, -em * 2, 0]];
+	const marks: [ThreeScatterPlotSet, ThreeScatterPlotSet, ThreeScatterPlotSet] = [
 		[-x / 2, 0, 0],
 		[0, 0, 0],
 		[x / 2, 0, 0],

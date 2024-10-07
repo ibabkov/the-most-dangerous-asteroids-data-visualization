@@ -1,6 +1,6 @@
-import { TAxis, TCameraSector } from '../../../types/internal';
+import { Axis, CameraSector } from '../../../types/internal';
 
-export function isNeedReverse(axis: TAxis, cameraSector: TCameraSector): boolean {
+export function isNeedReverse(axis: Axis, cameraSector: CameraSector): boolean {
 	const reverseZ = cameraSector == 1 || cameraSector == 2;
 	const reverseX = cameraSector == 2 || cameraSector == 3;
 

@@ -1,25 +1,25 @@
-export type TThreeScatterPlotSet = [number, number, number];
+export type ThreeScatterPlotSet = [number, number, number];
 
-export interface IThreeScatterPlotVector<T = number> {
+export type ThreeScatterPlotVector<T = number> = {
 	x: T;
 	y: T;
 	z: T;
-}
+};
 
-export interface IThreeScatterPlotMark {
+export type ThreeScatterPlotMark = {
 	label: string;
 	labelColor?: string;
 	marks: {
 		min: number;
 		max: number;
 	};
-}
+};
 
-export type TThreeScatterPlotMarks = IThreeScatterPlotVector<IThreeScatterPlotMark>;
+export type ThreeScatterPlotMarks = ThreeScatterPlotVector<ThreeScatterPlotMark>;
 
-export interface IThreeScatterPlotProps {
-	size?: TThreeScatterPlotSet;
-	position?: TThreeScatterPlotSet;
-	scale?: TThreeScatterPlotSet;
-	marks: TThreeScatterPlotMarks;
-}
+export type ThreeScatterPlotProps = {
+	size?: ThreeScatterPlotSet;
+	position?: ThreeScatterPlotSet;
+	scale?: ThreeScatterPlotSet;
+	marks: ThreeScatterPlotMarks;
+};

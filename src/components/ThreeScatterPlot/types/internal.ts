@@ -1,23 +1,23 @@
 import { Euler } from 'three';
 
-import { TThreeScatterPlotSet } from './external';
+import { ThreeScatterPlotSet } from './external';
 
-export type TAxis = 'x' | 'y' | 'z';
-export type TCameraSector = 0 | 1 | 2 | 3;
-export type TCameraSectorAngle = '-3' | '-2' | '-1' | '-0' | '0' | '1' | '2' | '3';
+export type Axis = 'x' | 'y' | 'z';
+export type CameraSector = 0 | 1 | 2 | 3;
+export type CameraSectorAngle = '-3' | '-2' | '-1' | '-0' | '0' | '1' | '2' | '3';
 
-export interface IMarkItem {
+export interface MarkItem {
 	text: string;
 	color: string;
-	position: TThreeScatterPlotSet;
+	position: ThreeScatterPlotSet;
 }
 
-export type TMarksList = [IMarkItem, IMarkItem, IMarkItem, IMarkItem];
+export type MarksList = [MarkItem, MarkItem, MarkItem, MarkItem];
 
-export interface IMark {
-	position: TThreeScatterPlotSet;
+export type Mark = {
+	position: ThreeScatterPlotSet;
 	rotation: Euler;
-	marks: TMarksList;
-}
+	marks: MarksList;
+};
 
-export type TAxisPositions = [TThreeScatterPlotSet, TThreeScatterPlotSet, TThreeScatterPlotSet, TThreeScatterPlotSet];
+export type AxisPositions = [ThreeScatterPlotSet, ThreeScatterPlotSet, ThreeScatterPlotSet, ThreeScatterPlotSet];

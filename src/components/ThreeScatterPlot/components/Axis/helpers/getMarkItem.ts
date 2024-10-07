@@ -1,14 +1,14 @@
-import { IThreeScatterPlotMark, TThreeScatterPlotSet } from '../../../types/external';
-import { IMarkItem } from '../../../types/internal';
+import { ThreeScatterPlotMark, ThreeScatterPlotSet } from '../../../types/external';
+import { MarkItem } from '../../../types/internal';
 
-export function getMarkItem(mark: IThreeScatterPlotMark) {
+export function getMarkItem(mark: ThreeScatterPlotMark) {
 	const {
 		label,
 		labelColor,
 		marks: { min, max },
 	} = mark;
 
-	return (position: TThreeScatterPlotSet, i: number): IMarkItem => {
+	return (position: ThreeScatterPlotSet, i: number): MarkItem => {
 		let color = 'white';
 		let text = '';
 

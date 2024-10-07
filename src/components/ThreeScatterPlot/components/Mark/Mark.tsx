@@ -2,13 +2,13 @@ import React from 'react';
 
 import { Text } from '@react-three/drei';
 
-import { IMarkItem } from '../../types/internal';
+import { MarkItem } from '../../types/internal';
 
-export interface IMarkProps extends IMarkItem {
+export interface MarkProps extends MarkItem {
 	em: number;
 }
 
-export const Mark = (props: IMarkProps) => {
+export const Mark = (props: MarkProps) => {
 	const { text, color, position, em } = props;
 
 	return (
