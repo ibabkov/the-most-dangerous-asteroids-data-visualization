@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import { BufferGeometry, Vector3 as ThreeVector3 } from 'three';
@@ -13,7 +15,7 @@ export type PointsContainerProps = {
 	scale: Parameters<ThreeVector3['set']>;
 };
 
-export const PointsContainer: React.FC<PointsContainerProps> = props => {
+export const PointsContainer = (props: PointsContainerProps) => {
 	const { geometry, scale } = props;
 	const texture = useTexture(POINT_TEXTURE_UTL);
 	const uniforms = usePointsUniforms(scale, texture);

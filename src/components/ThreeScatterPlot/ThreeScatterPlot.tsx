@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 import { Box } from './components/Box';
@@ -11,7 +13,7 @@ import { INITIAL_POSITION, INITIAL_SCALE, INITIAL_SIZE } from './constants/initi
 import { useYAxisRotation } from './hooks';
 
 /* TODO Create detached npm package for this scatter plot */
-export const ThreeScatterPlot: React.FC<ThreeScatterPlotProps> = props => {
+export const ThreeScatterPlot = (props: ThreeScatterPlotProps) => {
 	const { size = INITIAL_SIZE, position = INITIAL_POSITION, scale = INITIAL_SCALE, marks } = props;
 	const finalSize = getFinalSize(size, scale);
 	const [cameraSector, setCameraSector] = React.useState<CameraSector>(0);

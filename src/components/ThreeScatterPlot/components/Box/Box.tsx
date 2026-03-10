@@ -7,7 +7,7 @@ import { fragmentShader, vertexShader } from './shaders/gridMaterial';
 import { ThreeScatterPlotProps } from '../../types/external';
 
 const DEFAULT_UNIFORMS = { uColor: { value: [0.6, 0.6, 0.6] } };
-export const Box: React.FC<Omit<ThreeScatterPlotProps, 'marks'>> = props => {
+export const Box = (props: Omit<ThreeScatterPlotProps, 'marks'>) => {
 	const { size, position, scale } = props;
 
 	return (
