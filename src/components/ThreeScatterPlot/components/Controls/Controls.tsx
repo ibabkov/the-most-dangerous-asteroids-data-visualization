@@ -12,7 +12,7 @@ export type ControlsProps = {
 	onChange: (azimuthalAngle: CameraSector) => void;
 };
 
-export const Controls: React.FC<ControlsProps> = props => {
+export const Controls = (props: ControlsProps) => {
 	const { onChange } = props;
 	const ref = useRef<OrbitControlsImpl | null>(null);
 	const handleStart = useSwitchRotate(true);
